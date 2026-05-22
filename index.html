@@ -222,7 +222,8 @@ function rWSI(){
   if(wsiDone){
     var correct=wsiAnswers.filter(function(a){return a.ok;}).length;
     var h=dots()+'<div class="card"><div class="sec-label">RECALL COMPLETE</div>';
-    h+='<p style="font-size:1.05rem;"><strong>'+correct+'/'+WSI_QUOTES.length+'</strong> correct. '+(correct>=3?'You can tell them apart — good. Now let\'s look at what they actually said and why.':'The sources can be tricky. Pay close attention to the language in this briefing.')+'</p></div>';
+    h+='<p style="font-size:1.05rem;"><strong>'+correct+'/'+WSI_QUOTES.length+'</strong> correct. '+(correct>=3?'You can tell them apart. Now let\'s dig into what they actually said and why.':'The sources can be tricky. Pay close attention to the language in this briefing.')+'</p></div>';
+    h+='<div class="card"><div class="sec-label">QUICK RECAP FROM PART 2</div><p style="font-size:1rem;margin-bottom:.5rem;"><strong>Marriage of convenience</strong> — The USA-USSR alliance was based on necessity (defeating Hitler), not shared values.</p><p style="font-size:1rem;margin-bottom:.5rem;"><strong>Yalta (Feb 1945)</strong> — Big Three agreed: four zones for Germany, free elections in Eastern Europe, UN established.</p><p style="font-size:1rem;margin-bottom:.5rem;"><strong>20 million Soviet dead</strong> — Context for everything Stalin did next. Security fears, not just ideology.</p><p style="font-size:1rem;"><strong>Capitalism vs communism</strong> — Not just different systems, but fundamentally incompatible visions of society.</p></div>';
     h+=nav(true);
     app.innerHTML=h;return;
   }
